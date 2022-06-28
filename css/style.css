@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap'); */
+
 
 :root{
    --peru:#cd9452;
@@ -8,12 +9,20 @@
    --light-white:#ccc;
    --light-bg:#f5f5f5;
    --dark-bg:rgba(0,0,0,.7);
-   --border:.1rem solid #aaa;
-   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+   /* --border:.1rem solid #aaa; */
+   /* --box-shadow:0 .5rem 1rem rgba(0,0,0,.1); */
+}
+.homeimg{
+   width:100vw;
+   /* height: 100%; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
+
 *{
-   font-family: 'Dosis', sans-serif;
+   /* font-family: 'Dosis', sans-serif; */
    margin:0; padding:0;
    box-sizing: border-box;
    outline: none; border:none;
@@ -204,6 +213,22 @@ section{
 .swiper-button-prev::after{
    font-size: 2rem;
 }
+.slideshow-container {
+   max-width: 1000px;
+   position: relative;
+   margin: auto;
+ }
+ 
+ /* Caption text */
+ .text {
+   color: #f2f2f2;
+   font-size: 15px;
+   padding: 8px 12px;
+   position: absolute;
+   bottom: 8px;
+   width: 100%;
+   text-align: center;
+ }
 
 .about{
    display: flex;
@@ -214,10 +239,13 @@ section{
 
 .about .image{
    flex:1 1 41rem;
+   display: flex;
+   justify-content: center;
 }
 
 .about .image img{
-   width: 100%;
+   width: 60%;
+
 }
 
 .about .content{
@@ -270,7 +298,7 @@ section{
    padding:4rem 2rem;
    border-radius: .5rem;
    transform: scale(.9);
-   opacity: .5;
+   opacity: 1;
    margin-bottom: 4rem;
    cursor: pointer;
 }
@@ -698,15 +726,20 @@ section{
 /* media queries  */
 
 @media (max-width:1200px){
-
+.homeimg img{
+   width:90%;
+}
    section{
       padding:3rem 5%;
    }
 
 }
 
-@media (max-width:991px){
-
+@media (max-width:900px){
+   .homeimg img{
+      width:100%;
+      /* height:30%; */
+   }
    section{
       padding:3rem 2rem;
    }
@@ -722,7 +755,9 @@ section{
 }
 
 @media (max-width:768px){
-
+   .homeimg{
+      width:100vw;
+   }
    #menu-btn{
       display: inline-block;
    }
